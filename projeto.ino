@@ -95,15 +95,15 @@ void virar_d()
   digitalWrite(IN4, LOW);
 }
 
-void a_luzB(){
+void a_luzB(){ // LIGA LUZ TRASEIRA
   analogWrite(FAROLB, 100); 
 }
 
-void d_luzB(){
+void d_luzB(){  // DESLIGA LUZ TRASEIRA
   analogWrite(FAROLB, 0);
 }
 
-void sensorParar(){  
+void sensorParar(){   //VERIFICA O ULTRA SONICO, SE DISTANCIA FOR MENOR QUE 15, O CARRINHO PARA 
   long msec = ultrasonico.timing();
   
   float dCM;
