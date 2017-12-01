@@ -31,7 +31,7 @@ void setup()
  Serial.begin(9600);  //Inicializa porta serial.
 }
 
-void parar()
+void parar() // PARA O CARRINHO
 {
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, LOW);
@@ -40,27 +40,27 @@ void parar()
   d_luzB();
 }
 
-void a_farol()
+void a_farol() // LIGA O FAROL
 {
   analogWrite(FAROL, 100);
 }
 
-void ligar_b()
+void ligar_b() // LIGA A BUZINA
 {
   tone(BUZINA, 1500);
 }
 
-void desligar_b()
+void desligar_b() // DESLIGA A BUZINA
 {
   noTone(BUZINA);
 }
 
-void d_farol()
+void d_farol() // DESLIGA O FORAL 
 {
   analogWrite(FAROL, 0);
 }
 
-void forward()
+void forward() // VAI PARA FRENTE
 {
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, HIGH);
@@ -69,7 +69,7 @@ void forward()
 
 }
 
-void back(){
+void back(){ // VAI PARA TRÁS
 
   digitalWrite(IN1, HIGH);
   digitalWrite(IN2, LOW);
@@ -78,7 +78,7 @@ void back(){
   a_luzB();  
 }
 
-void virar_e()
+void virar_e() // VIRA PARA ESQUERDA
 {
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, LOW);
@@ -87,7 +87,7 @@ void virar_e()
   
 }
 
-void virar_d()
+void virar_d() // VIRA PARA DIREITA
 {
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, HIGH);
